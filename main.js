@@ -71,6 +71,7 @@ function randomChanceAmount () {
 
   if(randomChance === 0) {
     elRandomChance.textContent = `Game Over`;
+    elRandomInput.disabled = true;
   } else {
     elRandomChance.textContent = `Urinishlar soni: ${randomChance}`;
   }
