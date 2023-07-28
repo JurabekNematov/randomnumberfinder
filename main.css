@@ -1,0 +1,101 @@
+body {
+  box-sizing: border-box;
+  background-color: #201f1f;
+}
+
+/* Fizzbuzz */
+
+.fizzbuzz-text {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(43, 48, 190);
+}
+.fizzbuzz-text-fizz {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(132, 157, 64);
+}
+.fizzbuzz-text-buzz {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(104, 136, 174);
+}
+.fizzbuzz-text-error {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(199, 29, 10);
+}
+.chanse {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(55, 88, 207);
+}
+.chanse-end {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(173, 23, 23);
+}
+
+
+/* Find the random number */
+
+.result-text {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(88, 127, 150);
+}
+.result-text-big {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(88, 150, 92);
+}
+.result-text-little {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(149, 88, 150);
+}
+.result-text-right {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 32px;
+  line-height: 20px;
+  color: #fff;
+  background-color: rgb(29, 154, 29);
+}

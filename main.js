@@ -4,22 +4,33 @@ var elResult = elForm.querySelector(".js-result")
 
 function multiplication(userNumber) {
 
-  if(userNumber <= 0) {
-    return "Noto'g'ri raqam kiritdingiz !";
-  }
-  else if(userNumber % 3 === 0 && userNumber % 5 === 0) {
+  if(userNumber % 3 === 0 && userNumber % 5 === 0) {
+    elResult.classList.add("fizzbuzz-text");
+    elResult.classList.remove("fizzbuzz-text-fizz");
+    elResult.classList.remove("fizzbuzz-text-error")
+    elResult.classList.remove("fizzbuzz-text-buzz");
     return "FizzBuzz.";
   } 
-  else if(userNumber % 3 === 0) {
+  if(userNumber % 3 === 0) {
+    elResult.classList.add("fizzbuzz-text-fizz");
+    elResult.classList.remove("fizzbuzz-text");
+    elResult.classList.remove("fizzbuzz-text-error")
+    elResult.classList.remove("fizzbuzz-text-buzz");
     return "Fizz.";
+
   } 
-  else if(userNumber % 5 === 0) {
+  if(userNumber % 5 === 0) {
+    elResult.classList.add("fizzbuzz-text-buzz");
+    elResult.classList.remove("fizzbuzz-text");
+    elResult.classList.remove("fizzbuzz-text-error")
+    elResult.classList.remove("fizzbuzz-text-fizz");
     return "Buzz.";
   } 
-  else if(userNumber = isNaN(userNumber)) {
-    return "Raqam kiriting 💀!";
-  } 
   else {
+    elResult.classList.add("fizzbuzz-text-error")
+    elResult.classList.remove("fizzbuzz-text");
+    elResult.classList.remove("fizzbuzz-text-buzz");
+    elResult.classList.remove("fizzbuzz-text-fizz");
     return "Kiritilgan son 3 ga va 5 ga bo'linmaydi.";
   }
 }
@@ -46,18 +57,24 @@ var randomNumber = Math.floor(Math.random() * 100) + 1;
 function findRandomNumber (userNum){
   
   if(userNum > randomNumber) {
+    elRandomResult.classList.add("result-text-big");
+    elRandomResult.classList.remove("result-text");
+    elRandomResult.classList.remove("result-text-little");
+    elRandomResult.classList.remove("result-text-right");
     return "Kiritilgan raqam random raqamdan katta !";
   }
-  else if(userNum <= 0) {
-    return "Noto'g'ri raqam kiritildi !";
-  }
-  else if(userNum = isNaN(userNum)) {
-    return "Raqam kiriting !";
-  }
-  else if(userNum < randomNumber) {
+  if(userNum < randomNumber) {
+    elRandomResult.classList.add("result-text-little");
+    elRandomResult.classList.remove("result-text-big");
+    elRandomResult.classList.remove("result-text");
+    elRandomResult.classList.remove("result-text-right");
     return "Kiritilgan raqam random raqamdan kichik !";
   } 
-  else if(userNum = randomNumber) {
+  if(userNum = randomNumber) {
+    elRandomResult.classList.add("result-text-right");
+    elRandomResult.classList.remove("result-text-little");
+    elRandomResult.classList.remove("result-text-big");
+    elRandomResult.classList.remove("result-text");
     return "Raqamni to'g'ri topdingiz 🙌";
   } 
   else{
@@ -70,7 +87,9 @@ function randomChanceAmount () {
   randomChance-=1;
 
   if(randomChance === 0) {
-    elRandomChance.textContent = `Game Over`;
+    elRandomChance.classList.add("chanse-end");
+    elRandomChance.classList.remove("chanse");
+    elRandomChance.textContent = `Game Over ☠️`;
     elRandomInput.disabled = true;
   } else {
     elRandomChance.textContent = `Urinishlar soni: ${randomChance}`;
